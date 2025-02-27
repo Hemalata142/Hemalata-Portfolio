@@ -662,16 +662,14 @@ https://templatemo.com/tm-578-first-portfolio
                                     from_email: email,
                                     mobile_no: mobile,
                                     message: message
-                                }).then(function(response) {
-                                console.log('Success:', response);
-                                alert('Your message has been sent successfully!');
-                                // Clear the form after submission
-                                document.getElementById("contact-form").reset();
-                                }, function(error) {
-                                console.log('Failed:', error);
-                                alert('Sorry, something went wrong. Please try again.');
+                                })
+                                .then(function(response) {
+                                    console.log('Email sent successfully', response);
+                                })
+                                .catch(function(error) {
+                                    console.error('Error sending email', error);
                                 });
-                            });
+                                
                             </script>
 
                             
