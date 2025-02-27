@@ -641,7 +641,10 @@ https://templatemo.com/tm-578-first-portfolio
                             <!-- JavaScript to handle form submission -->
                             <script type="text/javascript">
                             // Initialize EmailJS with your Public Key
-                            emailjs.init("cs6YrwC2YbTqnWOT7");
+                            
+                            emailjs.init({
+                                publicKey: "7R1n34ssSQkDnyd3X",
+                            });
 
                             // Handle form submission
                             document.getElementById("contact-form").addEventListener('submit', function(event) {
@@ -655,9 +658,10 @@ https://templatemo.com/tm-578-first-portfolio
 
                                 // Send email using EmailJS service
                                 emailjs.send('service_esp5usa', 'template_mf9ve84', {
-                                from_name: name,     // Use the key 'from_name' to match your template placeholder
-                                message: message,    // Use 'message' to match your template placeholder
-                                mobile_no: mobile    // Use 'mobile_no' to match your template placeholder
+                                    from_name: name,
+                                    from_email: email,
+                                    mobile_no: mobile,
+                                    message: message
                                 }).then(function(response) {
                                 console.log('Success:', response);
                                 alert('Your message has been sent successfully!');
