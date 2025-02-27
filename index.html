@@ -655,10 +655,9 @@ https://templatemo.com/tm-578-first-portfolio
 
                                 // Send email using EmailJS service
                                 emailjs.send('service_esp5usa', 'template_mf9ve84', {
-                                from_name: name,
-                                email: email,
-                                mobile_no: mobile,
-                                message: message
+                                from_name: name,     // Use the key 'from_name' to match your template placeholder
+                                message: message,    // Use 'message' to match your template placeholder
+                                mobile_no: mobile    // Use 'mobile_no' to match your template placeholder
                                 }).then(function(response) {
                                 console.log('Success:', response);
                                 alert('Your message has been sent successfully!');
