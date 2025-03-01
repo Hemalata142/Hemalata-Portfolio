@@ -541,14 +541,63 @@ https://templatemo.com/tm-578-first-portfolio
                 </div>
             </section>
 
+            <!-- Include jQuery (Slick Slider requires it) -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+            <!-- Include Slick Slider CSS -->
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+            <!-- Include Slick Slider JS -->
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+            <style>
+                /* Slick slider customization */
+                .testimonials {
+                    display: flex;
+                    overflow: hidden;
+                    position: relative;
+                }
+
+                .testimonial-card {
+                    width: 50%; /* Show only two testimonials at a time */
+                    padding: 15px;
+                    box-sizing: border-box;
+                }
+
+                /* Make the testimonial cards look nice */
+                .testimonial-content {
+                    text-align: center;
+                    padding: 10px;
+                }
+
+                .testimonial-image {
+                    width: 100%;
+                    border-radius: 50%;
+                    max-width: 80px;
+                    margin-bottom: 15px;
+                }
+
+                /* Style for Slick slider dots */
+                .slick-dots {
+                    position: absolute;
+                    bottom: -30px;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .slick-dots li button:before {
+                    font-size: 12px;
+                    color: #fff;
+                }
+            </style>
+
             <!-- Testimonials Section -->
             <section id="testimonials" class="projects section-padding">
                 <div class="container">
                     <div class="row">
                         <div>
                             <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
-                                <!-- <img src="images/white-desk-work-study-aesthetics.jpg" class="avatar-image img-fluid" alt=""> -->
-    
                                 <h2 class="text-white ms-4 mb-0">Testimonial</h2>
                             </div>
                         </div>
@@ -562,7 +611,7 @@ https://templatemo.com/tm-578-first-portfolio
                                     <p class="author">- John Doe, Project Manager</p>
                                 </div>
                             </div>
-    
+
                             <div class="testimonial-card">
                                 <div class="image-container">
                                     <img src="image2.jpg" alt="Jane Smith" class="testimonial-image">
@@ -572,6 +621,7 @@ https://templatemo.com/tm-578-first-portfolio
                                     <p class="author">- Jane Smith, CTO</p>
                                 </div>
                             </div>
+
                             <div class="testimonial-card">
                                 <div class="image-container">
                                     <img src="image2.jpg" alt="Jane Smith" class="testimonial-image">
@@ -581,6 +631,7 @@ https://templatemo.com/tm-578-first-portfolio
                                     <p class="author">- Jane Smith, CTO</p>
                                 </div>
                             </div>
+
                             <div class="testimonial-card">
                                 <div class="image-container">
                                     <img src="image2.jpg" alt="Jane Smith" class="testimonial-image">
@@ -592,66 +643,24 @@ https://templatemo.com/tm-578-first-portfolio
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </section>
 
-            <!-- Add styles for the testimonials in your CSS -->
-            <style>
-            .testimonials-section {
-                padding: 50px 0;
-                background-color: #f9f9f9;
-                text-align: center;
-            }
+            <!-- Initialize Slick Slider -->
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $('.testimonials').slick({
+                        slidesToShow: 2,  // Show 2 testimonials at a time
+                        slidesToScroll: 1,
+                        dots: true,       // Enable dots for navigation
+                        infinite: true,   // Allow infinite scrolling
+                        autoplay: true,   // Enable autoplay
+                        autoplaySpeed: 3000  // Set autoplay speed (3 seconds)
+                    });
+                });
+            </script>
 
-            .section-title {
-                font-size: 2em;
-                margin-bottom: 30px;
-            }
-
-            .testimonials {
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-            }
-
-            .testimonial-card {
-                display: flex;
-                align-items: center;
-                max-width: 600px;
-                background: white;
-                padding: 20px;
-                border-radius: 10px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                flex-direction: row;
-            }
-
-            .image-container {
-                flex-shrink: 0;
-                margin-right: 20px;
-            }
-
-            .testimonial-image {
-                width: 80px;
-                height: 80px;
-                border-radius: 50%;
-                object-fit: cover;
-            }
-
-            .testimonial-content {
-                text-align: left;
-            }
-
-            .quote {
-                font-style: italic;
-            }
-
-            .author {
-                font-weight: bold;
-                margin-top: 10px;
-            }
-            </style>
-
+            
 
             <section class="contact section-padding" id="section_5">
                     <div class="container">
