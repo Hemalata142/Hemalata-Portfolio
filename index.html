@@ -551,55 +551,12 @@ https://templatemo.com/tm-578-first-portfolio
             <!-- Include Slick Slider JS -->
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
-            <style>
-                /* Slick slider customization */
-                .testimonials {
-                    display: flex;
-                    overflow: hidden;
-                    position: relative;
-                }
-
-                .testimonial-card {
-                    width: 50%; /* Show only two testimonials at a time */
-                    padding: 15px;
-                    box-sizing: border-box;
-                }
-
-                /* Make the testimonial cards look nice */
-                .testimonial-content {
-                    text-align: center;
-                    padding: 10px;
-                }
-
-                .testimonial-image {
-                    width: 100%;
-                    border-radius: 50%;
-                    max-width: 80px;
-                    margin-bottom: 15px;
-                }
-
-                /* Style for Slick slider dots */
-                .slick-dots {
-                    position: absolute;
-                    bottom: -30px;
-                    width: 100%;
-                    text-align: center;
-                }
-
-                .slick-dots li button:before {
-                    font-size: 12px;
-                    color: #fff;
-                }
-            </style>
-
             <!-- Testimonials Section -->
             <section id="testimonials" class="projects section-padding">
                 <div class="container">
                     <div class="row">
-                        <div>
-                            <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
-                                <h2 class="text-white ms-4 mb-0">Testimonial</h2>
-                            </div>
+                        <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
+                            <h2 class="text-white ms-4 mb-0">Testimonial</h2>
                         </div>
                         <div class="testimonials">
                             <div class="testimonial-card">
@@ -624,43 +581,95 @@ https://templatemo.com/tm-578-first-portfolio
 
                             <div class="testimonial-card">
                                 <div class="image-container">
-                                    <img src="image2.jpg" alt="Jane Smith" class="testimonial-image">
+                                    <img src="image3.jpg" alt="Alice Brown" class="testimonial-image">
                                 </div>
                                 <div class="testimonial-content">
-                                    <p class="quote">"Working with Hemalata was a pleasure. She built an API that integrated flawlessly with our system."</p>
-                                    <p class="author">- Jane Smith, CTO</p>
+                                    <p class="quote">"Hemalata's work was impressive! She provided us with a seamless solution that made our processes more efficient."</p>
+                                    <p class="author">- Alice Brown, Product Owner</p>
                                 </div>
                             </div>
 
                             <div class="testimonial-card">
                                 <div class="image-container">
-                                    <img src="image2.jpg" alt="Jane Smith" class="testimonial-image">
+                                    <img src="image4.jpg" alt="Bob Johnson" class="testimonial-image">
                                 </div>
                                 <div class="testimonial-content">
-                                    <p class="quote">"Working with Hemalata was a pleasure. She built an API that integrated flawlessly with our system."</p>
-                                    <p class="author">- Jane Smith, CTO</p>
+                                    <p class="quote">"We were very impressed with Hemalata's ability to understand our needs and deliver a solution quickly. Highly recommend!"</p>
+                                    <p class="author">- Bob Johnson, CEO</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Slick Slider Initialization -->
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        $('.testimonials').slick({
+                            slidesToShow: 2,  // Show 2 testimonials at a time
+                            slidesToScroll: 1, // Scroll one testimonial at a time
+                            dots: true,        // Show navigation dots
+                            infinite: true,    // Infinite loop for scrolling
+                            autoplay: true,    // Enable autoplay
+                            autoplaySpeed: 3000, // Speed of autoplay (in ms)
+                            centerMode: false, // Disable centered mode
+                            focusOnSelect: true, // Focus on the selected slide
+                            responsive: [
+                                {
+                                    breakpoint: 768,
+                                    settings: {
+                                        slidesToShow: 1, // Show 1 testimonial at a time on smaller screens
+                                    }
+                                }
+                            ]
+                        });
+                    });
+                </script>
+
+                <style>
+                    /* Slick slider customization */
+                    .testimonials {
+                        position: relative;
+                    }
+
+                    .testimonial-card {
+                        width: 100%; /* Ensures the cards take full width inside the slider */
+                        padding: 15px;
+                        box-sizing: border-box;
+                    }
+
+                    .testimonial-content {
+                        text-align: center;
+                        padding: 10px;
+                    }
+
+                    .testimonial-image {
+                        width: 100%;
+                        border-radius: 50%;
+                        max-width: 80px;
+                        margin-bottom: 15px;
+                    }
+
+                    /* Style for Slick slider dots */
+                    .slick-dots {
+                        position: absolute;
+                        bottom: -30px;
+                        width: 100%;
+                        text-align: center;
+                    }
+
+                    .slick-dots li button:before {
+                        font-size: 12px;
+                        color: #fff;
+                    }
+
+                    /* Optional: Add margin between cards */
+                    .slick-slide {
+                        margin-right: 15px;
+                    }
+                </style>
             </section>
 
-            <!-- Initialize Slick Slider -->
-            <script type="text/javascript">
-                $(document).ready(function(){
-                    $('.testimonials').slick({
-                        slidesToShow: 2,  // Show 2 testimonials at a time
-                        slidesToScroll: 1,
-                        dots: true,       // Enable dots for navigation
-                        infinite: true,   // Allow infinite scrolling
-                        autoplay: true,   // Enable autoplay
-                        autoplaySpeed: 3000  // Set autoplay speed (3 seconds)
-                    });
-                });
-            </script>
-
-            
 
             <section class="contact section-padding" id="section_5">
                     <div class="container">
